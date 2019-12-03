@@ -17,7 +17,8 @@ import static org.mockito.Mockito.when;
 class PaymentServiceTest {
 
     private PaymentService paymentService;
-    @Mock DateTimeProvider dateTimeProvider;
+    @Mock
+    DateTimeProvider dateTimeProvider;
 
     @BeforeEach
     void init() {
@@ -87,7 +88,6 @@ class PaymentServiceTest {
         for (Payment payment : payments) {
             assertThat(payment.getPaymentItems().size()).isEqualTo(1);
         }
-
     }
 
     @Test
@@ -150,7 +150,6 @@ class PaymentServiceTest {
         // then
         assertThat(payments.size()).isEqualTo(4);
     }
-
 
     @Test
     void shouldFindWithTotalValueOver300() {
